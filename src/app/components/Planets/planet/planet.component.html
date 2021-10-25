@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{planet.name}}</h5>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Weight: {{planet.weight}}</li>
+      <li class="list-group-item">Storage: {{planet.storage}}</li>
+    </ul>
+    <div class="btn-container">
+      <div><button class="btn btn-success" (click)="updatePlanet()">Edit</button></div>
+      <div><button class="btn btn-danger"  (click)="deletePlanet()">Delete</button></div>
+    </div>
+  </div>
+</div>

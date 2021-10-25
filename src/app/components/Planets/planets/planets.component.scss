@@ -1,0 +1,9 @@
+.planets {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.planet {
+  flex-basis: 15%;
+}
