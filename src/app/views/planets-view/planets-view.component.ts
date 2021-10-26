@@ -15,6 +15,7 @@ import {Action} from "../../models/Action";
 })
 export class PlanetsViewComponent implements OnInit {
   planets: Planet[] = []
+  errorText?: string
 
   constructor(private planetService: PlanetService) {
     planetService.getPlanets().subscribe(items => this.planets = items);
@@ -42,7 +43,7 @@ export class PlanetsViewComponent implements OnInit {
 
         this.planets.splice(planetIndex, 1);
       },
-      this.planetService.handleError('Planet delete error')
+      this.handleError('Planet delete error')
     );
   }
 
@@ -53,7 +54,7 @@ export class PlanetsViewComponent implements OnInit {
 
         this.planets[newPlanetIndex] = newPlanet;
       },
-        this.planetService.handleError('Planet update error')
+        this.handleError('Planet update error')
       );
   }
 
@@ -62,7 +63,15 @@ export class PlanetsViewComponent implements OnInit {
       .subscribe((newPlanet: Planet) => {
         this.planets.push(newPlanet);
       },
-        this.planetService.handleError('Planet create error')
+        this.handleError('Planet create error')
     );
+  }
+
+  handleError(description: string) {
+    return (error: HttpErrorResponse) => {
+      this.errorText = error.status === 0 ?
+        `A client error occurred: ${error.error}` :
+        `${description}: ${error.error}`
+    }
   }
 }

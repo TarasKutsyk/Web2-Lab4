@@ -44,15 +44,4 @@ export class PlanetService {
   deletePlanet(planet: Planet) {
     return this.API.deleteItem(planet, this.planetsUrl);
   }
-
-  handleError(description: string) {
-    return (error: HttpErrorResponse) => {
-      if (error.status === 0) {
-        return console.error('A client error occurred:', error.error);
-      } else {
-        return console.error(
-          `${description}:`, error.error);
-      }
-    }
-  }
 }

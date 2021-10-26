@@ -12,6 +12,7 @@ import { PlanetsComponent } from './components/Planets/planets/planets.component
 import { PlanetComponent } from './components/Planets/planet/planet.component';
 import { FormsModule } from "@angular/forms";
 import { AddPlanetFormComponent } from './components/Planets/add-planet-form/add-planet-form.component';
+import { ErrorFormComponent } from './components/error-form/error-form.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AddPlanetFormComponent } from './components/Planets/add-planet-form/add
     PlanetsViewComponent,
     PlanetsComponent,
     PlanetComponent,
-    AddPlanetFormComponent
+    AddPlanetFormComponent,
+    ErrorFormComponent
   ],
   imports: [
     BrowserModule,
