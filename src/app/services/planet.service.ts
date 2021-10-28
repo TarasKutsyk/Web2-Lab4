@@ -3,8 +3,7 @@ import {ApiService} from "./api.service";
 
 import {ApiConfig} from "../config"
 import Planet from "../models/Planet";
-import {HttpErrorResponse} from "@angular/common/http";
-import {Subject, throwError} from "rxjs";
+import {Subject} from "rxjs";
 import {Action, ActionType} from "../models/Action";
 
 export type planetAction = {

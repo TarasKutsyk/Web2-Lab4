@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import {planetAction, PlanetService} from "../../services/planet.service";
 import Planet from "../../models/Planet";
-import {NgForm} from "@angular/forms";
 import {HttpErrorResponse} from "@angular/common/http";
-import {throwError} from "rxjs";
 import {Action} from "../../models/Action";
 
 

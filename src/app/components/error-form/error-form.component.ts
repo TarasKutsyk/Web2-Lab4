@@ -15,7 +15,6 @@ export class ErrorFormComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(changes);
     if (!changes.errorText.firstChange) {
       this.showError = true;
     }

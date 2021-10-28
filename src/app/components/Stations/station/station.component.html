@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Station#{{station.number}}</h5>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Storage: {{station.storage}}</li>
+      <li class="list-group-item">Need: {{station.need}}</li>
+      <li class="list-group-item">Planet location: {{station.planetLocation ? station.planetLocation : 'None'}}</li>
+    </ul>
+    <div class="btn-container">
+      <div><button class="btn btn-success" (click)="updateStation()">Edit</button></div>
+      <div><button class="btn btn-danger"  (click)="deleteStation()">Delete</button></div>
+    </div>
+  </div>
+</div>
