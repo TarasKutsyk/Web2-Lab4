@@ -1,0 +1,26 @@
+<hr>
+<form #stationForm="ngForm" id="form" (ngSubmit)="submitStation(stationForm)">
+  <div class="form-group">
+    <label for="number">Number</label>
+    <input type="text" class="form-control" id="number" name="number"
+           [(ngModel)]="stationFormModel.number">
+  </div>
+  <div class="form-group">
+    <label for="storage">Storage</label>
+    <input type="number" class="form-control" id="storage" name="storage"
+           [(ngModel)]="stationFormModel.storage">
+  </div>
+  <div class="form-group">
+    <label for="need">Need</label>
+    <input type="number" class="form-control" id="need" name="need"
+           [(ngModel)]="stationFormModel.need">
+  </div>
+  <div class="form-group">
+    <label for="planetLocation">Located at planet</label>
+    <input type="text" class="form-control" id="planetLocation" name="planetLocation"
+           [(ngModel)]="stationFormModel.planetLocation">
+  </div>
+  <button *ngIf="!editFlag" type="submit" class="btn btn-primary submitBtn">Create</button>
+  <button *ngIf="editFlag" type="submit" class="btn btn-primary submitBtn">Edit</button>
+</form>
+<hr>

@@ -1,0 +1,9 @@
+.stations {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.station {
+  flex-basis: 15%;
+}
