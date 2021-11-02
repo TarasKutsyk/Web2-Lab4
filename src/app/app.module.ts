@@ -17,6 +17,10 @@ import { AddStationFormComponent } from './components/Stations/add-station-form/
 import { StationComponent } from './components/Stations/station/station.component';
 import { StationsComponent } from './components/Stations/stations/stations.component';
 import { StationsViewComponent } from './views/stations-view/stations-view.component';
+import { CargoComponent } from './components/Cargoes/cargo/cargo.component';
+import { CargoesComponent } from './components/Cargoes/cargoes/cargoes.component';
+import { AddCargoFormComponent } from './components/Cargoes/add-cargo-form/add-cargo-form.component';
+import { CargoesViewComponent } from './views/cargoes-view/cargoes-view.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,11 @@ import { StationsViewComponent } from './views/stations-view/stations-view.compo
     AddStationFormComponent,
     StationComponent,
     StationsComponent,
-    StationsViewComponent
+    StationsViewComponent,
+    CargoComponent,
+    CargoesComponent,
+    AddCargoFormComponent,
+    CargoesViewComponent
   ],
   imports: [
     BrowserModule,

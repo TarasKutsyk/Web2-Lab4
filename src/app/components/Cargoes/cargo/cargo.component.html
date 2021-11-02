@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Cargo#{{cargo.code}}: {{cargo.name}}</h5>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Weight: {{cargo.weight}}</li>
+      <li class="list-group-item">Planet destination: {{cargo.planetDestination ? cargo.planetDestination : 'None'}}</li>
+      <li class="list-group-item">Station destination: {{cargo.stationDestination ? cargo.stationDestination : 'None'}}</li>
+    </ul>
+    <div class="btn-container">
+      <div><button class="btn btn-success" (click)="updateCargo()">Edit</button></div>
+      <div><button class="btn btn-danger"  (click)="deleteCargo()">Delete</button></div>
+    </div>
+  </div>
+</div>
