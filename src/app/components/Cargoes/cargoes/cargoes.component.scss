@@ -1,0 +1,9 @@
+.cargoes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.cargo {
+  flex-basis: 15%;
+}
